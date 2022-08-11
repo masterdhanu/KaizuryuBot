@@ -52,9 +52,8 @@
     ─「 ᴄʀᴇᴅɪᴛs 」─
 </h3>
 
-- <b>[Xelcius](https://github.com/RimuruDemonlord)  ➻  [sᴏᴍᴇᴛʜɪɴɢ](https://github.com/RimuruDemonlord/KaizuryuBot) </b>
-- <b>[ᴀɴᴏɴʏᴍᴏᴜs]  ➻  [sᴏᴍᴇᴛʜɪɴɢ](https://github.com/RimuruDemonlord/KaizuryuBot) </b>
+- <b>[Master_dhanu](https://github.com/RimuruDemonlord)  ➻  [sᴏᴍᴇᴛʜɪɴɢ](https://github.com/RimuruDemonlord/ShinchanBot) </b>
  
-<b>ᴀɴᴅ ᴀʟʟ [ᴛʜᴇ ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs](https://github.com/RimuruDemonlord/KaizuryuBot/graphs/contributors) ᴡʜᴏ ʜᴇʟᴩᴇᴅ ɪɴ ᴍᴀᴋɪɴɢ KaizuryuBot ᴜsᴇғᴜʟ & ᴩᴏᴡᴇʀғᴜʟ 🖤 </b>
+<b>ᴀɴᴅ ᴀʟʟ [ᴛʜᴇ ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs](https://github.com/RimuruDemonlord/KaizuryuBot/graphs/contributors) ᴡʜᴏ ʜᴇʟᴩᴇᴅ ɪɴ ᴍᴀᴋɪɴɢ Shinchan pro Robot ᴜsᴇғᴜʟ & ᴩᴏᴡᴇʀғᴜʟ 🖤 </b>
 
 ━━━━━━━━━━━━━━━━━━━━

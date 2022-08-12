@@ -8,14 +8,14 @@ from telegram import MessageEntity, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import Filters, MessageHandler, run_async
 
-from AsukaRobot import dispatcher
-from AsukaRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
-from AsukaRobot.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
-from AsukaRobot import REDIS
-from AsukaRobot.modules.users import get_user_id
+from shinchanRobot import dispatcher
+from ShinchanRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
+from ShibchanRobot.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
+from ShinchanRobot import REDIS
+from ShinchanRobot.modules.users import get_user_id
 
-from AsukaRobot.modules.helper_funcs.alternate import send_message
-from AsukaRobot.modules.helper_funcs.readable_time import get_readable_time
+from shinchanRobot.modules.helper_funcs.alternate import send_message
+from ShinchanRobot.modules.helper_funcs.readable_time import get_readable_time
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
@@ -150,7 +150,7 @@ def __user_info__(user_id):
     return text
 
 def __stats__():
-    return f"鈥� {len(REDIS.keys())} Total Keys in Redis Database."
+    AA GAYA TU WAPS {len(REDIS.keys())} Total Keys in Redis Database."
 
 def __gdpr__(user_id):
     end_afk(user_id)

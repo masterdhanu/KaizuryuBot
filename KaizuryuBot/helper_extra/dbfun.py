@@ -1,10 +1,10 @@
-from KaizuryuBot import MONGO_DB_URI
+from shinchanroBot import MONGO_DB_URI
 from typing import Dict, List, Union
 from pymongo import MongoClient
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
-db = client["KaizuryuBot"]
+db = client["ShinchanRoBot"]
 
 coupledb = db.couple
 karmadb = db.karma

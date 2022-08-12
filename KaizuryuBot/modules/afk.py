@@ -20,7 +20,7 @@ from ShinchanRobot.modules.helper_funcs.readable_time import get_readable_time
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
 
-AFKVID = https://telegra.ph/file/847264d7891a2e6df1163.mp4
+AFKVID = https://telegra.ph/file/6e96bfe072361f045bd77.mp4
 
 
 def afk(update, context):

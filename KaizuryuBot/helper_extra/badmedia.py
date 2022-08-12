@@ -1,4 +1,4 @@
-from KaizuryuBot import telethn as tbot
+from shinchanroBot import telethn as tbot
 import requests
 import time
 

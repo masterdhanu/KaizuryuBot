@@ -8,19 +8,19 @@ from telegram import MessageEntity, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import Filters, MessageHandler, run_async
 
-from shinchanRobot import dispatcher
+from shinchanRoBot Robot import dispatcher
 from ShinchanRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
-from ShibchanRobot.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
+from shinchanRobot.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
 from ShinchanRobot import REDIS
 from ShinchanRobot.modules.users import get_user_id
 
-from shinchanRobot.modules.helper_funcs.alternate import send_message
-from ShinchanRobot.modules.helper_funcs.readable_time import get_readable_time
+from ShinchanRobot.modules.helper_funcs.alternate import send_message
+from ShincahnRobot.modules.helper_funcs.readable_time import get_readable_time
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
 
-AFKVID = https://telegra.ph/file/6e96bfe072361f045bd77.mp4
+AFKVID = "https://telegra.ph/file/c49829f9f5d65947cbc7e.mp4"
 
 
 def afk(update, context):
@@ -150,7 +150,7 @@ def __user_info__(user_id):
     return text
 
 def __stats__():
-    AA GAYA TU WAPS {len(REDIS.keys())} Total Keys in Redis Database."
+    return f"鈥� {len(REDIS.keys())} Total Keys in Redis Database."
 
 def __gdpr__(user_id):
     end_afk(user_id)

@@ -1,3 +1,4 @@
+
 from KaizuryuBot import MONGO_DB_URI
 from typing import Dict, List, Union
 from pymongo import MongoClient

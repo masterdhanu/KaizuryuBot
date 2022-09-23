@@ -82,46 +82,46 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*ʜᴇʏ* {},
+*Êœá´‡Ê* {},
 
-*๏ ɪ ᴀᴍ* {} !
-➻ ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
+*à¹ Éª á´€á´* {} !
+âž» á´›Êœá´‡ á´á´sá´› á´©á´á´¡á´‡Ê€Ò“á´œÊŸ á´›á´‡ÊŸá´‡É¢Ê€á´€á´ É¢Ê€á´á´œá´© á´á´€É´á´€É¢á´‡á´á´‡É´á´› Ê™á´á´› á´¡Éªá´›Êœ á´€á´¡á´‡sá´á´á´‡ á´€É´á´… á´œsá´‡Ò“á´œÊŸ Ò“á´‡á´€á´›á´œÊ€á´‡s.
 
-──────────────────
-*๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ /help ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.*
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+*à¹ á´„ÊŸÉªá´„á´‹ á´É´ á´›Êœá´‡ /help á´›á´ É¢á´‡á´› ÉªÉ´Ò“á´Ê€á´á´€á´›Éªá´É´ á´€Ê™á´á´œá´› á´Ê á´á´á´…á´œÊŸá´‡s á´€É´á´… á´„á´á´á´á´€É´á´…s.*
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ",
+            text="Aá´…á´… Má´‡ Tá´ Yá´á´œÊ€ CÊœá´€á´›",
             url=f"https://t.me/{dispatcher.bot.username}?startgroup=true",
         ),
     ],
     [
-        InlineKeyboardButton(text="Sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="Sá´œá´©á´©á´Ê€á´›", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
-        InlineKeyboardButton(text="Oᴡɴᴇʀ", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="Oá´¡É´á´‡Ê€", url=f"tg://user?id={OWNER_ID}"),
         InlineKeyboardButton(
-            text="Sᴏᴜʀᴄᴇ", url=f"https://github.com/RimuruDemonlord/KaizuryuBot"
+            text="Sá´á´œÊ€á´„á´‡", url=f"https://github.com/RimuruDemonlord/KaizuryuBot"
         ),
     ],
 ]
 
 HELP_STRINGS = f"""
-*» {dispatcher.bot.first_name} ᴇxᴄʟᴜsɪᴠᴇ ꜰᴇᴀᴛᴜʀᴇs*
+*Â» {dispatcher.bot.first_name} á´‡xá´„ÊŸá´œsÉªá´ á´‡ êœ°á´‡á´€á´›á´œÊ€á´‡s*
 
-➲ /start : ꜱᴛᴀʀᴛꜱ ᴍᴇ | ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ʏᴏᴜ'ᴠᴇ ᴀʟʀᴇᴀᴅʏ ᴅᴏɴᴇ ɪᴛ​.
-➲ /donate : sᴜᴘᴘᴏʀᴛ ᴍᴇ ʙʏ ᴅᴏɴᴀᴛɪɴɢ ꜰᴏʀ ᴍʏ ʜᴀʀᴅᴡᴏʀᴋ​.
-➲ /help  : ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ꜱᴇᴄᴛɪᴏɴ.
-  ‣ ɪɴ ᴘᴍ : ᴡɪʟʟ ꜱᴇɴᴅ ʏᴏᴜ ʜᴇʟᴘ​ ꜰᴏʀ ᴀʟʟ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇꜱ.
-  ‣ ɪɴ ɢʀᴏᴜᴘ : ᴡɪʟʟ ʀᴇᴅɪʀᴇᴄᴛ ʏᴏᴜ ᴛᴏ ᴘᴍ, ᴡɪᴛʜ ᴀʟʟ ᴛʜᴀᴛ ʜᴇʟᴘ​ ᴍᴏᴅᴜʟᴇꜱ."""
+âž² /start : êœ±á´›á´€Ê€á´›êœ± á´á´‡ | á´€á´„á´„á´Ê€á´…ÉªÉ´É¢ á´›á´ á´á´‡ Êá´á´œ'á´ á´‡ á´€ÊŸÊ€á´‡á´€á´…Ê á´…á´É´á´‡ Éªá´›â€‹.
+âž² /donate : sá´œá´˜á´˜á´Ê€á´› á´á´‡ Ê™Ê á´…á´É´á´€á´›ÉªÉ´É¢ êœ°á´Ê€ á´Ê Êœá´€Ê€á´…á´¡á´Ê€á´‹â€‹.
+âž² /help  : á´€á´ á´€ÉªÊŸá´€Ê™ÊŸá´‡ á´„á´á´á´á´€É´á´…êœ± êœ±á´‡á´„á´›Éªá´É´.
+  â€£ ÉªÉ´ á´˜á´ : á´¡ÉªÊŸÊŸ êœ±á´‡É´á´… Êá´á´œ Êœá´‡ÊŸá´˜â€‹ êœ°á´Ê€ á´€ÊŸÊŸ êœ±á´œá´˜á´˜á´Ê€á´›á´‡á´… á´á´á´…á´œÊŸá´‡êœ±.
+  â€£ ÉªÉ´ É¢Ê€á´á´œá´˜ : á´¡ÉªÊŸÊŸ Ê€á´‡á´…ÉªÊ€á´‡á´„á´› Êá´á´œ á´›á´ á´˜á´, á´¡Éªá´›Êœ á´€ÊŸÊŸ á´›Êœá´€á´› Êœá´‡ÊŸá´˜â€‹ á´á´á´…á´œÊŸá´‡êœ±."""
 
-DONATE_STRING = """ʜᴇʏ,
-  ʜᴀᴩᴩʏ ᴛᴏ ʜᴇᴀʀ ᴛʜᴀᴛ ʏᴏᴜ ᴡᴀɴɴᴀ ᴅᴏɴᴀᴛᴇ.
+DONATE_STRING = """Êœá´‡Ê,
+  Êœá´€á´©á´©Ê á´›á´ Êœá´‡á´€Ê€ á´›Êœá´€á´› Êá´á´œ á´¡á´€É´É´á´€ á´…á´É´á´€á´›á´‡.
 
-ʏᴏᴜ ᴄᴀɴ ᴅɪʀᴇᴄᴛʟʏ ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [ᴅᴇᴠᴇʟᴏᴩᴇʀ](https://t.me/Xelcius) ғᴏʀ ᴅᴏɴᴀᴛɪɴɢ ᴏʀ ʏᴏᴜ ᴄᴀɴ ᴠɪsɪᴛ ᴍʏ [sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ](https://t.me/{SUPPORT_CHAT}) ᴀɴᴅ ᴀsᴋ ᴛʜᴇʀᴇ ᴀʙᴏᴜᴛ ᴅᴏɴᴀᴛɪᴏɴ."""
+Êá´á´œ á´„á´€É´ á´…ÉªÊ€á´‡á´„á´›ÊŸÊ á´„á´É´á´›á´€á´„á´› á´Ê [á´…á´‡á´ á´‡ÊŸá´á´©á´‡Ê€](https://t.me/Xelcius) Ò“á´Ê€ á´…á´É´á´€á´›ÉªÉ´É¢ á´Ê€ Êá´á´œ á´„á´€É´ á´ ÉªsÉªá´› á´Ê [sá´œá´©á´©á´Ê€á´› á´„Êœá´€á´›](https://t.me/{SUPPORT_CHAT}) á´€É´á´… á´€sá´‹ á´›Êœá´‡Ê€á´‡ á´€Ê™á´á´œá´› á´…á´É´á´€á´›Éªá´É´."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -206,7 +206,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="â—", callback_data="help_back")]]
                     ),
                 )
 
@@ -236,7 +236,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_photo(
             START_IMG,
-            caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ!\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
+            caption="Éª á´€á´ á´€ÊŸÉªá´ á´‡!\n<b>Éª á´…Éªá´…É´'á´› sÊŸá´‡á´˜á´› sÉªÉ´á´„á´‡â€‹:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -314,7 +314,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "» *ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ꜰᴏʀ​​* *{}* :\n".format(
+                "Â» *á´€á´ á´€ÉªÊŸá´€Ê™ÊŸá´‡ á´„á´á´á´á´€É´á´…s êœ°á´Ê€â€‹â€‹* *{}* :\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -324,7 +324,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="â—", callback_data="help_back")]]
                 ),
             )
 
@@ -370,73 +370,73 @@ def Kaizuryu_about_callback(update: Update, context: CallbackContext):
     if query.data == "kaizuryu_":
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
-            text=f"*ʜᴇʏ,*\n  *ᴛʜɪs ɪs {dispatcher.bot.first_name}*"
-            "\n*ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀꜱɪʟʏ ᴀɴᴅ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴄᴀᴍᴍᴇʀꜱ ᴀɴᴅ ꜱᴘᴀᴍᴍᴇʀꜱ.*"
-            "\n*ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ sǫʟᴀʟᴄʜᴇᴍʏ ᴀɴᴅ ᴍᴏɴɢᴏᴅʙ ᴀs ᴅᴀᴛᴀʙᴀsᴇ.*"
-            "\n\n────────────────────"
-            f"\n*➻ ᴜᴩᴛɪᴍᴇ »* {uptime}"
-            f"\n*➻ ᴜsᴇʀs »* {sql.num_users()}"
-            f"\n*➻ ᴄʜᴀᴛs »* {sql.num_chats()}"
-            "\n────────────────────"
-            "\n\n➲  ɪ ᴄᴀɴ ʀᴇꜱᴛʀɪᴄᴛ ᴜꜱᴇʀꜱ."
-            "\n➲  ɪ ʜᴀᴠᴇ ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴛɪ-ꜰʟᴏᴏᴅ ꜱʏꜱᴛᴇᴍ."
-            "\n➲  ɪ ᴄᴀɴ ɢʀᴇᴇᴛ ᴜꜱᴇʀꜱ ᴡɪᴛʜ ᴄᴜꜱᴛᴏᴍɪᴢᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇꜱ ᴀɴᴅ ᴇᴠᴇɴ ꜱᴇᴛ ᴀ ɢʀᴏᴜᴘ'ꜱ ʀᴜʟᴇꜱ."
-            "\n➲  ɪ ᴄᴀɴ ᴡᴀʀɴ ᴜꜱᴇʀꜱ ᴜɴᴛɪʟ ᴛʜᴇʏ ʀᴇᴀᴄʜ ᴍᴀx ᴡᴀʀɴꜱ, ᴡɪᴛʜ ᴇᴀᴄʜ ᴘʀᴇᴅᴇꜰɪɴᴇᴅ ᴀᴄᴛɪᴏɴꜱ ꜱᴜᴄʜ ᴀꜱ ʙᴀɴ, ᴍᴜᴛᴇ, ᴋɪᴄᴋ, ᴇᴛᴄ."
-            "\n➲  ɪ ʜᴀᴠᴇ ᴀ ɴᴏᴛᴇ ᴋᴇᴇᴘɪɴɢ ꜱʏꜱᴛᴇᴍ, ʙʟᴀᴄᴋʟɪꜱᴛꜱ, ᴀɴᴅ ᴇᴠᴇɴ ᴘʀᴇᴅᴇᴛᴇʀᴍɪɴᴇᴅ ʀᴇᴘʟɪᴇꜱ ᴏɴ ᴄᴇʀᴛᴀɪɴ ᴋᴇʏᴡᴏʀᴅꜱ."
-            f"\n\n➻ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʙᴀsɪᴄ ʜᴇʟᴩ ᴀɴᴅ ɪɴғᴏ ᴀʙᴏᴜᴛ {dispatcher.bot.first_name}.",
+            text=f"*Êœá´‡Ê,*\n  *á´›ÊœÉªs Éªs {dispatcher.bot.first_name}*"
+            "\n*á´€ á´˜á´á´¡á´‡Ê€êœ°á´œÊŸ É¢Ê€á´á´œá´˜ á´á´€É´á´€É¢á´‡á´á´‡É´á´› Ê™á´á´› Ê™á´œÉªÊŸá´› á´›á´ Êœá´‡ÊŸá´˜ Êá´á´œ á´á´€É´á´€É¢á´‡ Êá´á´œÊ€ É¢Ê€á´á´œá´˜ á´‡á´€êœ±ÉªÊŸÊ á´€É´á´… á´›á´ á´˜Ê€á´á´›á´‡á´„á´› Êá´á´œÊ€ É¢Ê€á´á´œá´˜ êœ°Ê€á´á´ êœ±á´„á´€á´á´á´‡Ê€êœ± á´€É´á´… êœ±á´˜á´€á´á´á´‡Ê€êœ±.*"
+            "\n*á´¡Ê€Éªá´›á´›á´‡É´ ÉªÉ´ á´©Êá´›Êœá´É´ á´¡Éªá´›Êœ sÇ«ÊŸá´€ÊŸá´„Êœá´‡á´Ê á´€É´á´… á´á´É´É¢á´á´…Ê™ á´€s á´…á´€á´›á´€Ê™á´€sá´‡.*"
+            "\n\nâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€"
+            f"\n*âž» á´œá´©á´›Éªá´á´‡ Â»* {uptime}"
+            f"\n*âž» á´œsá´‡Ê€s Â»* {sql.num_users()}"
+            f"\n*âž» á´„Êœá´€á´›s Â»* {sql.num_chats()}"
+            "\nâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€"
+            "\n\nâž²  Éª á´„á´€É´ Ê€á´‡êœ±á´›Ê€Éªá´„á´› á´œêœ±á´‡Ê€êœ±."
+            "\nâž²  Éª Êœá´€á´ á´‡ á´€É´ á´€á´…á´ á´€É´á´„á´‡á´… á´€É´á´›Éª-êœ°ÊŸá´á´á´… êœ±Êêœ±á´›á´‡á´."
+            "\nâž²  Éª á´„á´€É´ É¢Ê€á´‡á´‡á´› á´œêœ±á´‡Ê€êœ± á´¡Éªá´›Êœ á´„á´œêœ±á´›á´á´Éªá´¢á´€Ê™ÊŸá´‡ á´¡á´‡ÊŸá´„á´á´á´‡ á´á´‡êœ±êœ±á´€É¢á´‡êœ± á´€É´á´… á´‡á´ á´‡É´ êœ±á´‡á´› á´€ É¢Ê€á´á´œá´˜'êœ± Ê€á´œÊŸá´‡êœ±."
+            "\nâž²  Éª á´„á´€É´ á´¡á´€Ê€É´ á´œêœ±á´‡Ê€êœ± á´œÉ´á´›ÉªÊŸ á´›Êœá´‡Ê Ê€á´‡á´€á´„Êœ á´á´€x á´¡á´€Ê€É´êœ±, á´¡Éªá´›Êœ á´‡á´€á´„Êœ á´˜Ê€á´‡á´…á´‡êœ°ÉªÉ´á´‡á´… á´€á´„á´›Éªá´É´êœ± êœ±á´œá´„Êœ á´€êœ± Ê™á´€É´, á´á´œá´›á´‡, á´‹Éªá´„á´‹, á´‡á´›á´„."
+            "\nâž²  Éª Êœá´€á´ á´‡ á´€ É´á´á´›á´‡ á´‹á´‡á´‡á´˜ÉªÉ´É¢ êœ±Êêœ±á´›á´‡á´, Ê™ÊŸá´€á´„á´‹ÊŸÉªêœ±á´›êœ±, á´€É´á´… á´‡á´ á´‡É´ á´˜Ê€á´‡á´…á´‡á´›á´‡Ê€á´ÉªÉ´á´‡á´… Ê€á´‡á´˜ÊŸÉªá´‡êœ± á´É´ á´„á´‡Ê€á´›á´€ÉªÉ´ á´‹á´‡Êá´¡á´Ê€á´…êœ±."
+            f"\n\nâž» á´„ÊŸÉªá´„á´‹ á´É´ á´›Êœá´‡ Ê™á´œá´›á´›á´É´s É¢Éªá´ á´‡É´ Ê™á´‡ÊŸá´á´¡ Ò“á´Ê€ É¢á´‡á´›á´›ÉªÉ´É¢ Ê™á´€sÉªá´„ Êœá´‡ÊŸá´© á´€É´á´… ÉªÉ´Ò“á´ á´€Ê™á´á´œá´› {dispatcher.bot.first_name}.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="sᴜᴩᴩᴏʀᴛ", callback_data="kaizuryu_support"
+                            text="sá´œá´©á´©á´Ê€á´›", callback_data="kaizuryu_support"
                         ),
                         InlineKeyboardButton(
-                            text="ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"
+                            text="á´„á´á´á´á´€É´á´…s", callback_data="help_back"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"
+                            text="á´…á´‡á´ á´‡ÊŸá´á´©á´‡Ê€", url=f"tg://user?id={OWNER_ID}"
                         ),
                         InlineKeyboardButton(
-                            text="sᴏᴜʀᴄᴇ",
+                            text="sá´á´œÊ€á´„á´‡",
                             callback_data="source_",
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="◁", callback_data="kaizuryu_back"),
+                        InlineKeyboardButton(text="â—", callback_data="kaizuryu_back"),
                     ],
                 ]
             ),
         )
     elif query.data == "kaizuryu_support":
         query.message.edit_text(
-            text="*๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ʜᴇʟᴩ ᴀɴᴅ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍᴇ.*"
-            f"\n\nɪғ ʏᴏᴜ ғᴏᴜɴᴅ ᴀɴʏ ʙᴜɢ ɪɴ {dispatcher.bot.first_name} ᴏʀ ɪғ ʏᴏᴜ ᴡᴀɴɴᴀ ɢɪᴠᴇ ғᴇᴇᴅʙᴀᴄᴋ ᴀʙᴏᴜᴛ ᴛʜᴇ {dispatcher.bot.first_name}, ᴩʟᴇᴀsᴇ ʀᴇᴩᴏʀᴛ ɪᴛ ᴀᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ.",
+            text="*à¹ á´„ÊŸÉªá´„á´‹ á´É´ á´›Êœá´‡ Ê™á´œá´›á´›á´É´s É¢Éªá´ á´‡É´ Ê™á´‡ÊŸá´á´¡ á´›á´ É¢á´‡á´› Êœá´‡ÊŸá´© á´€É´á´… á´á´Ê€á´‡ ÉªÉ´Ò“á´Ê€á´á´€á´›Éªá´É´ á´€Ê™á´á´œá´› á´á´‡.*"
+            f"\n\nÉªÒ“ Êá´á´œ Ò“á´á´œÉ´á´… á´€É´Ê Ê™á´œÉ¢ ÉªÉ´ {dispatcher.bot.first_name} á´Ê€ ÉªÒ“ Êá´á´œ á´¡á´€É´É´á´€ É¢Éªá´ á´‡ Ò“á´‡á´‡á´…Ê™á´€á´„á´‹ á´€Ê™á´á´œá´› á´›Êœá´‡ {dispatcher.bot.first_name}, á´©ÊŸá´‡á´€sá´‡ Ê€á´‡á´©á´Ê€á´› Éªá´› á´€á´› sá´œá´©á´©á´Ê€á´› á´„Êœá´€á´›.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"
+                            text="sá´œá´©á´©á´Ê€á´›", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                         InlineKeyboardButton(
-                            text="ᴜᴩᴅᴀᴛᴇs", url=f"https://t.me/{SUPPORT_CHAT}"
+                            text="á´œá´©á´…á´€á´›á´‡s", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"
+                            text="á´…á´‡á´ á´‡ÊŸá´á´©á´‡Ê€", url=f"tg://user?id={OWNER_ID}"
                         ),
                         InlineKeyboardButton(
-                            text="ɢɪᴛʜᴜʙ",
+                            text="É¢Éªá´›Êœá´œÊ™",
                             callback_data="https://github.com/RimuruDemonlord",
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="◁", callback_data="kaizuryu_"),
+                        InlineKeyboardButton(text="â—", callback_data="kaizuryu_"),
                     ],
                 ]
             ),
@@ -459,24 +459,24 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=f"""
-*ʜᴇʏ,
-ᴛʜɪs ɪs {dispatcher.bot.first_name},
-ᴀɴ ᴏᴩᴇɴ sᴏᴜʀᴄᴇ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ.*
+*Êœá´‡Ê,
+á´›ÊœÉªs Éªs {dispatcher.bot.first_name},
+á´€É´ á´á´©á´‡É´ sá´á´œÊ€á´„á´‡ á´›á´‡ÊŸá´‡É¢Ê€á´€á´ É¢Ê€á´á´œá´© á´á´€É´á´€É¢á´‡á´á´‡É´á´› Ê™á´á´›.*
 
-ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ : [ᴛᴇʟᴇᴛʜᴏɴ](https://github.com/LonamiWebs/Telethon)
-[ᴩʏʀᴏɢʀᴀᴍ](https://github.com/pyrogram/pyrogram)
-[ᴩʏᴛʜᴏɴ-ᴛᴇʟᴇɢʀᴀᴍ-ʙᴏᴛ](https://github.com/python-telegram-bot/python-telegram-bot)
-ᴀɴᴅ ᴜsɪɴɢ [sǫʟᴀʟᴄʜᴇᴍʏ](https://www.sqlalchemy.org) ᴀɴᴅ [ᴍᴏɴɢᴏ](https://cloud.mongodb.com) ᴀs ᴅᴀᴛᴀʙᴀsᴇ.
+á´¡Ê€Éªá´›á´›á´‡É´ ÉªÉ´ á´©Êá´›Êœá´É´ á´¡Éªá´›Êœ á´›Êœá´‡ Êœá´‡ÊŸá´© á´Ò“ : [á´›á´‡ÊŸá´‡á´›Êœá´É´](https://github.com/LonamiWebs/Telethon)
+[á´©ÊÊ€á´É¢Ê€á´€á´](https://github.com/pyrogram/pyrogram)
+[á´©Êá´›Êœá´É´-á´›á´‡ÊŸá´‡É¢Ê€á´€á´-Ê™á´á´›](https://github.com/python-telegram-bot/python-telegram-bot)
+á´€É´á´… á´œsÉªÉ´É¢ [sÇ«ÊŸá´€ÊŸá´„Êœá´‡á´Ê](https://www.sqlalchemy.org) á´€É´á´… [á´á´É´É¢á´](https://cloud.mongodb.com) á´€s á´…á´€á´›á´€Ê™á´€sá´‡.
 
-*ʜᴇʀᴇ ɪs ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ :* [ɢɪᴛʜᴜʙ](https://github.com/RimuruDemonlord/KaizuryuBot)
+*Êœá´‡Ê€á´‡ Éªs á´Ê sá´á´œÊ€á´„á´‡ á´„á´á´…á´‡ :* [É¢Éªá´›Êœá´œÊ™](https://github.com/RimuruDemonlord/KaizuryuBot)
 
-{dispatcher.bot.first_name} ɪs ʟɪᴄᴇɴsᴇᴅ ᴜɴᴅᴇʀ ᴛʜᴇ [ᴍɪᴛ ʟɪᴄᴇɴsᴇ](https://github.com/RimuruDemonlord).
-© 2022 - 2023 [@Kaizuryu](https://t.me/{SUPPORT_CHAT}), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ.
+{dispatcher.bot.first_name} Éªs ÊŸÉªá´„á´‡É´sá´‡á´… á´œÉ´á´…á´‡Ê€ á´›Êœá´‡ [á´Éªá´› ÊŸÉªá´„á´‡É´sá´‡](https://github.com/RimuruDemonlord).
+Â© 2022 - 2023 [@Kaizuryu](https://t.me/{SUPPORT_CHAT}), á´€ÊŸÊŸ Ê€ÉªÉ¢Êœá´›s Ê€á´‡sá´‡Ê€á´ á´‡á´….
 """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="source_back")]]
+                [[InlineKeyboardButton(text="â—", callback_data="source_back")]]
             ),
         )
     elif query.data == "source_back":
@@ -506,7 +506,7 @@ def get_help(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="ʜᴇʟᴘ​",
+                                text="Êœá´‡ÊŸá´˜â€‹",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
@@ -517,12 +517,12 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "» ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴩ.",
+            "Â» á´„Êœá´á´sá´‡ á´€É´ á´á´©á´›Éªá´É´ Ò“á´Ê€ É¢á´‡á´›á´›ÉªÉ´É¢ Êœá´‡ÊŸá´©.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="ᴏᴩᴇɴ ɪɴ ᴩʀɪᴠᴀᴛᴇ",
+                            text="á´á´©á´‡É´ ÉªÉ´ á´©Ê€Éªá´ á´€á´›á´‡",
                             url="https://t.me/{}?start=help".format(
                                 context.bot.username
                             ),
@@ -530,7 +530,7 @@ def get_help(update: Update, context: CallbackContext):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴏᴩᴇɴ ʜᴇʀᴇ",
+                            text="á´á´©á´‡É´ Êœá´‡Ê€á´‡",
                             callback_data="help_back",
                         )
                     ],
@@ -551,7 +551,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="â—", callback_data="help_back")]]
             ),
         )
 
@@ -623,7 +623,7 @@ def settings_button(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="◁",
+                                text="â—",
                                 callback_data="stngs_back({})".format(chat_id),
                             )
                         ]
@@ -698,7 +698,7 @@ def get_settings(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="sᴇᴛᴛɪɴɢs​",
+                                text="sá´‡á´›á´›ÉªÉ´É¢sâ€‹",
                                 url="t.me/{}?start=stngs_{}".format(
                                     context.bot.username, chat.id
                                 ),
@@ -725,8 +725,8 @@ def donate(update: Update, context: CallbackContext):
 
         if OWNER_ID != 5132611794 and DONATION_LINK:
             update.effective_message.reply_text(
-                f"» ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴩᴇʀ ᴏғ {dispatcher.bot.first_name} sᴏʀᴄᴇ ᴄᴏᴅᴇ ɪs [Xelcius](https://t.me/xelcius)."
-                f"\n\nʙᴜᴛ ʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴅᴏɴᴀᴛᴇ ᴛᴏ ᴛʜᴇ ᴩᴇʀsᴏɴ ᴄᴜʀʀᴇɴᴛʟʏ ʀᴜɴɴɪɴɢ ᴍᴇ : [ʜᴇʀᴇ]({DONATION_LINK})",
+                f"Â» á´›Êœá´‡ á´…á´‡á´ á´‡ÊŸá´á´©á´‡Ê€ á´Ò“ {dispatcher.bot.first_name} sá´Ê€á´„á´‡ á´„á´á´…á´‡ Éªs [Xelcius](https://t.me/xelcius)."
+                f"\n\nÊ™á´œá´› Êá´á´œ á´„á´€É´ á´€ÊŸsá´ á´…á´É´á´€á´›á´‡ á´›á´ á´›Êœá´‡ á´©á´‡Ê€sá´É´ á´„á´œÊ€Ê€á´‡É´á´›ÊŸÊ Ê€á´œÉ´É´ÉªÉ´É¢ á´á´‡ : [Êœá´‡Ê€á´‡]({DONATION_LINK})",
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
             )
@@ -776,14 +776,14 @@ def main():
                 f"@{SUPPORT_CHAT}",
                 animation=SUPPORTVID,
                 caption=f"""
-{dispatcher.bot.first_name} ɪs ᴀʟɪᴠᴇ...
+{dispatcher.bot.first_name} Éªs á´€ÊŸÉªá´ á´‡...
 
-━━━━━━━━━━━━━
-ㅤ๏ **ᴘʏᴛʜᴏɴ :** `{y()}`
-ㅤ๏ **ʟɪʙʀᴀʀʏ :** `{telever}`
-ㅤ๏ **ᴛᴇʟᴇᴛʜᴏɴ :** `{tlhver}`
-ㅤ๏ **ᴩʏʀᴏɢʀᴀᴍ :** `{pyrover}`
-━━━━━━━━━━━━
+â”â”â”â”â”â”â”â”â”â”â”â”â”
+ã…¤à¹ **á´˜Êá´›Êœá´É´ :** `{y()}`
+ã…¤à¹ **ÊŸÉªÊ™Ê€á´€Ê€Ê :** `{telever}`
+ã…¤à¹ **á´›á´‡ÊŸá´‡á´›Êœá´É´ :** `{tlhver}`
+ã…¤à¹ **á´©ÊÊ€á´É¢Ê€á´€á´ :** `{pyrover}`
+â”â”â”â”â”â”â”â”â”â”â”â”
  """,
                 parse_mode=ParseMode.MARKDOWN,
             )

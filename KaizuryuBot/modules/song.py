@@ -20,11 +20,9 @@ def song(client, message):
     message.delete()
     user_id = message.from_user.id
     user_name = message.from_user.first_name
-    chutiya = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
+    chutiya = f"[{user_name}](tg://user?id={str(user_id)})"
 
-    query = ""
-    for i in message.command[1:]:
-        query += " " + str(i)
+    query = "".join(f" {str(i)}" for i in message.command[1:])
     print(query)
     m = message.reply("**» sᴇᴀʀᴄʜɪɴɢ, ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
@@ -46,7 +44,7 @@ def song(client, message):
         m.edit(
             "**😴 sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ᴏɴ ʏᴏᴜᴛᴜʙᴇ.**\n\n» ᴍᴀʏʙᴇ ᴛᴜɴᴇ ɢᴀʟᴛɪ ʟɪᴋʜᴀ ʜᴏ, ᴩᴀᴅʜᴀɪ - ʟɪᴋʜᴀɪ ᴛᴏʜ ᴋᴀʀᴛᴀ ɴᴀʜɪ ᴛᴜ !"
         )
-        print(str(e))
+        print(e)
         return
     m.edit("» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...\n\nᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...")
     try:

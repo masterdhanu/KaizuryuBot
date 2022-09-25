@@ -23,12 +23,13 @@ async def is_register_admin(chat, user):
 async def _(event):
     if event.fwd_from:
         return
-    if event.is_group:
-        if not (await is_register_admin(event.input_chat, event.message.sender_id)):
-            await event.reply(
-                "🥴 ɴᴇᴇᴅ ᴀᴅᴍɪɴ ᴩᴏᴡᴇʀ ᴛᴏ ᴜsᴇ ᴛʜɪs ɪɴ ɢʀᴏᴜᴩs﹐ ʙᴜᴛ ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ɪᴛ ɪɴ ᴍʏ ᴩᴍ."
-            )
-            return
+    if event.is_group and not (
+        await is_register_admin(event.input_chat, event.message.sender_id)
+    ):
+        await event.reply(
+            "🥴 ɴᴇᴇᴅ ᴀᴅᴍɪɴ ᴩᴏᴡᴇʀ ᴛᴏ ᴜsᴇ ᴛʜɪs ɪɴ ɢʀᴏᴜᴩs﹐ ʙᴜᴛ ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ɪᴛ ɪɴ ᴍʏ ᴩᴍ."
+        )
+        return
 
     the_real_message = None
     reply_to_id = None
@@ -51,4 +52,4 @@ async def _(event):
             )
             await event.delete()
     else:
-        await event.reply("`{}`".format(the_real_message))
+        await event.reply(f"`{the_real_message}`")

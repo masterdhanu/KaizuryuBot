@@ -61,9 +61,7 @@ async def async_searcher(
             return await data.json()
         if re_content:
             return await data.read()
-        if real:
-            return data
-        return await data.text()
+        return data if real else await data.text()
 
 
 def _unquote_text(text):

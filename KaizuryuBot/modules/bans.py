@@ -96,7 +96,7 @@ def ban(update: Update, context: CallbackContext) -> str:
         f"<b>ᴜsᴇʀ:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
     )
     if reason:
-        log += "\n<b>ʀᴇᴀsᴏɴ:</b> {}".format(reason)
+        log += f"\n<b>ʀᴇᴀsᴏɴ:</b> {reason}"
 
     try:
         chat.kick_member(user_id)
@@ -193,7 +193,7 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
         f"<b>ᴛɪᴍᴇ:</b> {time_val}"
     )
     if reason:
-        log += "\n<b>ʀᴇᴀsᴏɴ:</b> {}".format(reason)
+        log += f"\n<b>ʀᴇᴀsᴏɴ:</b> {reason}"
 
     try:
         chat.kick_member(user_id, until_date=bantime)
@@ -261,8 +261,7 @@ def kick(update: Update, context: CallbackContext) -> str:
         message.reply_text("I really wish I could kick this user....")
         return log_message
 
-    res = chat.unban_member(user_id)  # unban on current user = kick
-    if res:
+    if res := chat.unban_member(user_id):
         # bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
         bot.sendMessage(
             chat.id,
@@ -294,8 +293,7 @@ def kickme(update: Update, context: CallbackContext):
         update.effective_message.reply_text("I wish I could... but you're an admin.")
         return
 
-    res = update.effective_chat.unban_member(user_id)  # unban on current user = kick
-    if res:
+    if res := update.effective_chat.unban_member(user_id):
         update.effective_message.reply_text("*kicks you out of the group*")
     else:
         update.effective_message.reply_text("Huh? I can't :/")
@@ -371,12 +369,11 @@ def selfunban(context: CallbackContext, update: Update) -> str:
     try:
         member = chat.get_member(user.id)
     except BadRequest as excp:
-        if excp.message == "User not found":
-            message.reply_text("I can't seem to find this user.")
-            return
-        else:
+        if excp.message != "User not found":
             raise
 
+        message.reply_text("I can't seem to find this user.")
+        return
     if is_user_in_chat(chat, user.id):
         message.reply_text("Aren't you already in the chat??")
         return
@@ -384,14 +381,7 @@ def selfunban(context: CallbackContext, update: Update) -> str:
     chat.unban_member(user.id)
     message.reply_text("Yep, I have unbanned you.")
 
-    log = (
-        f"<b>{html.escape(chat.title)}:</b>\n"
-        f"ᴜɴʙᴀɴɴᴇᴅ\n"
-        f"<b>ᴜɴʙᴀɴɴᴇᴅ ʙʏ:</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>ᴜsᴇʀ:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
-    )
-
-    return log
+    return f"<b>{html.escape(chat.title)}:</b>\nᴜɴʙᴀɴɴᴇᴅ\n<b>ᴜɴʙᴀɴɴᴇᴅ ʙʏ:</b> {mention_html(user.id, user.first_name)}\n<b>ᴜsᴇʀ:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
 
 
 __help__ = """

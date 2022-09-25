@@ -157,7 +157,7 @@ def setchat_title(update: Update, context: CallbackContext):
         return
 
     try:
-        context.bot.set_chat_title(int(chat.id), str(title))
+        context.bot.set_chat_title(int(chat.id), title)
         msg.reply_text(
             f"» sᴜᴄᴄᴇssғᴜʟʟʏ sᴇᴛ <b>{title}</b> ᴀs ɴᴇᴡ ᴄʜᴀᴛ ᴛɪᴛʟᴇ !",
             parse_mode=ParseMode.HTML,
@@ -183,7 +183,8 @@ def promote(update: Update, context: CallbackContext) -> str:
     promoter = chat.get_member(user.id)
 
     if (
-        not (promoter.can_promote_members or promoter.status == "creator")
+        not promoter.can_promote_members
+        and promoter.status != "creator"
         and user.id not in DRAGONS
     ):
         message.reply_text("» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴅᴅ ɴᴇᴡ ᴀᴅᴍɪɴs   !")
@@ -242,14 +243,7 @@ def promote(update: Update, context: CallbackContext) -> str:
         parse_mode=ParseMode.HTML,
     )
 
-    log_message = (
-        f"<b>{html.escape(chat.title)}:</b>\n"
-        f"#ᴩʀᴏᴍᴏᴛᴇᴅ\n"
-        f"<b>ᴩʀᴏᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>ᴜsᴇʀ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
-    )
-
-    return log_message
+    return f"<b>{html.escape(chat.title)}:</b>\n#ᴩʀᴏᴍᴏᴛᴇᴅ\n<b>ᴩʀᴏᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n<b>ᴜsᴇʀ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
 
 
 @connection_status
@@ -268,7 +262,8 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
     promoter = chat.get_member(user.id)
 
     if (
-        not (promoter.can_promote_members or promoter.status == "creator")
+        not promoter.can_promote_members
+        and promoter.status != "creator"
         and user.id not in DRAGONS
     ):
         message.reply_text("» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴅᴅ ɴᴇᴡ ᴀᴅᴍɪɴs   !")
@@ -323,14 +318,7 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         parse_mode=ParseMode.HTML,
     )
 
-    log_message = (
-        f"<b>{html.escape(chat.title)}:</b>\n"
-        f"#ʟᴏᴡᴩʀᴏᴍᴏᴛᴇᴅ\n"
-        f"<b>ᴩʀᴏᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>ᴜsᴇʀ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
-    )
-
-    return log_message
+    return f"<b>{html.escape(chat.title)}:</b>\n#ʟᴏᴡᴩʀᴏᴍᴏᴛᴇᴅ\n<b>ᴩʀᴏᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n<b>ᴜsᴇʀ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
 
 
 @connection_status
@@ -349,7 +337,8 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
     promoter = chat.get_member(user.id)
 
     if (
-        not (promoter.can_promote_members or promoter.status == "creator")
+        not promoter.can_promote_members
+        and promoter.status != "creator"
         and user.id not in DRAGONS
     ):
         message.reply_text("» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴅᴅ ɴᴇᴡ ᴀᴅᴍɪɴs   !")
@@ -409,11 +398,12 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
             [
                 InlineKeyboardButton(
                     "↻ ᴅᴇᴍᴏᴛᴇ ↺",
-                    callback_data="demote_({})".format(user_member.user.id),
+                    callback_data=f"demote_({user_member.user.id})",
                 )
             ]
         ]
     )
+
 
     bot.sendMessage(
         chat.id,
@@ -421,14 +411,7 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         parse_mode=ParseMode.HTML,
     )
 
-    log_message = (
-        f"<b>{html.escape(chat.title)}:</b>\n"
-        f"#ғᴜʟʟᴩʀᴏᴍᴏᴛᴇᴅ\n"
-        f"<b>ᴩʀᴏᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>ᴜsᴇʀ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
-    )
-
-    return log_message
+    return f"<b>{html.escape(chat.title)}:</b>\n#ғᴜʟʟᴩʀᴏᴍᴏᴛᴇᴅ\n<b>ᴩʀᴏᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n<b>ᴜsᴇʀ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
 
 
 @connection_status
@@ -462,7 +445,7 @@ def demote(update: Update, context: CallbackContext) -> str:
         )
         return
 
-    if not user_member.status == "administrator":
+    if user_member.status != "administrator":
         message.reply_text("» ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ !")
         return
 
@@ -491,14 +474,8 @@ def demote(update: Update, context: CallbackContext) -> str:
             parse_mode=ParseMode.HTML,
         )
 
-        log_message = (
-            f"<b>{html.escape(chat.title)}:</b>\n"
-            f"#ᴅᴇᴍᴏᴛᴇᴅ\n"
-            f"<b>ᴅᴇᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n"
-            f"<b>ᴅᴇᴍᴏᴛᴇᴅ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
-        )
+        return f"<b>{html.escape(chat.title)}:</b>\n#ᴅᴇᴍᴏᴛᴇᴅ\n<b>ᴅᴇᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n<b>ᴅᴇᴍᴏᴛᴇᴅ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
 
-        return log_message
     except BadRequest:
         message.reply_text(
             "» ғᴀɪʟᴇᴅ ᴛᴏ ᴅᴇᴍᴏᴛᴇ ᴍᴀʏʙᴇ ɪ'ᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ᴏʀ ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴇʟsᴇ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴀᴛ"
@@ -612,15 +589,17 @@ def pin(update: Update, context: CallbackContext) -> str:
         msg.reply_text("» ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ᴩɪɴ ɪᴛ !")
         return
 
-    is_silent = True
-    if len(args) >= 1:
+    if prev_message and is_group:
         is_silent = (
-            args[0].lower() != "notify"
-            or args[0].lower() == "loud"
-            or args[0].lower() == "violent"
+            (
+                args[0].lower() != "notify"
+                or args[0].lower() == "loud"
+                or args[0].lower() == "violent"
+            )
+            if len(args) >= 1
+            else True
         )
 
-    if prev_message and is_group:
         try:
             bot.pinChatMessage(
                 chat.id, prev_message.message_id, disable_notification=is_silent
@@ -637,13 +616,7 @@ def pin(update: Update, context: CallbackContext) -> str:
             if excp.message != "Chat_not_modified":
                 raise
 
-        log_message = (
-            f"<b>{html.escape(chat.title)}:</b>\n"
-            f"ᴩɪɴɴᴇᴅ-ᴀ-ᴍᴇssᴀɢᴇ\n"
-            f"<b>ᴩɪɴɴᴇᴅ ʙʏ :</b> {mention_html(user.id, html.escape(user.first_name))}"
-        )
-
-        return log_message
+        return f"<b>{html.escape(chat.title)}:</b>\nᴩɪɴɴᴇᴅ-ᴀ-ᴍᴇssᴀɢᴇ\n<b>ᴩɪɴɴᴇᴅ ʙʏ :</b> {mention_html(user.id, html.escape(user.first_name))}"
 
 
 @bot_admin
@@ -658,7 +631,8 @@ def unpin(update: Update, context: CallbackContext):
     unpinner = chat.get_member(user.id)
 
     if (
-        not (unpinner.can_pin_messages or unpinner.status == "creator")
+        not unpinner.can_pin_messages
+        and unpinner.status != "creator"
         and user.id not in DRAGONS
     ):
         message.reply_text(
@@ -702,13 +676,7 @@ def unpin(update: Update, context: CallbackContext):
             else:
                 raise
 
-    log_message = (
-        f"<b>{html.escape(chat.title)}:</b>\n"
-        f"ᴜɴᴩɪɴɴᴇᴅ-ᴀ-ᴍᴇssᴀɢᴇ\n"
-        f"<b>ᴜɴᴩɪɴɴᴇᴅ ʙʏ :</b> {mention_html(user.id, html.escape(user.first_name))}"
-    )
-
-    return log_message
+    return f"<b>{html.escape(chat.title)}:</b>\nᴜɴᴩɪɴɴᴇᴅ-ᴀ-ᴍᴇssᴀɢᴇ\n<b>ᴜɴᴩɪɴɴᴇᴅ ʙʏ :</b> {mention_html(user.id, html.escape(user.first_name))}"
 
 
 @bot_admin
@@ -810,22 +778,18 @@ def adminlist(update, context):
         )
 
     administrators = bot.getChatAdministrators(chat_id)
-    text = "ᴀᴅᴍɪɴs ɪɴ <b>{}</b>:".format(html.escape(update.effective_chat.title))
+    text = f"ᴀᴅᴍɪɴs ɪɴ <b>{html.escape(update.effective_chat.title)}</b>:"
 
     for admin in administrators:
         user = admin.user
         status = admin.status
         custom_title = admin.custom_title
 
-        if user.first_name == "":
-            name = "☠ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛ"
-        else:
-            name = "{}".format(
-                mention_html(
-                    user.id,
-                    html.escape(user.first_name + " " + (user.last_name or "")),
-                ),
-            )
+        name = (
+            "☠ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛ"
+            if user.first_name == ""
+            else f'{mention_html(user.id, html.escape(f"{user.first_name} " + (user.last_name or "")))}'
+        )
 
         if user.is_bot:
             administrators.remove(admin)
@@ -835,7 +799,7 @@ def adminlist(update, context):
         #    name = escape_markdown("@" + user.username)
         if status == "creator":
             text += "\n ᴏᴡɴᴇʀ :"
-            text += "\n<code> • </code>{}\n".format(name)
+            text += f"\n<code> • </code>{name}\n"
 
             if custom_title:
                 text += f"<code> ┗━ {html.escape(custom_title)}</code>\n"
@@ -850,42 +814,35 @@ def adminlist(update, context):
         status = admin.status
         custom_title = admin.custom_title
 
-        if user.first_name == "":
-            name = "☠ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛ"
-        else:
-            name = "{}".format(
-                mention_html(
-                    user.id,
-                    html.escape(user.first_name + " " + (user.last_name or "")),
-                ),
-            )
-        # if user.username:
-        #    name = escape_markdown("@" + user.username)
+        name = (
+            "☠ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛ"
+            if user.first_name == ""
+            else f'{mention_html(user.id, html.escape(f"{user.first_name} " + (user.last_name or "")))}'
+        )
+
         if status == "administrator":
             if custom_title:
                 try:
                     custom_admin_list[custom_title].append(name)
                 except KeyError:
-                    custom_admin_list.update({custom_title: [name]})
+                    custom_admin_list[custom_title] = [name]
             else:
                 normal_admin_list.append(name)
 
     for admin in normal_admin_list:
-        text += "\n<code> • </code>{}".format(admin)
+        text += f"\n<code> • </code>{admin}"
 
     for admin_group in custom_admin_list.copy():
         if len(custom_admin_list[admin_group]) == 1:
-            text += "\n<code> • </code>{} | <code>{}</code>".format(
-                custom_admin_list[admin_group][0],
-                html.escape(admin_group),
-            )
+            text += f"\n<code> • </code>{custom_admin_list[admin_group][0]} | <code>{html.escape(admin_group)}</code>"
+
             custom_admin_list.pop(admin_group)
 
     text += "\n"
     for admin_group, value in custom_admin_list.items():
-        text += "\n🔮 <code>{}</code>".format(admin_group)
+        text += f"\n🔮 <code>{admin_group}</code>"
         for admin in value:
-            text += "\n<code> • </code>{}".format(admin)
+            text += f"\n<code> • </code>{admin}"
         text += "\n"
 
     try:
@@ -902,8 +859,7 @@ def button(update: Update, context: CallbackContext) -> str:
     query: Optional[CallbackQuery] = update.callback_query
     user: Optional[User] = update.effective_user
     bot: Optional[Bot] = context.bot
-    match = re.match(r"demote_\((.+?)\)", query.data)
-    if match:
+    if match := re.match(r"demote_\((.+?)\)", query.data):
         user_id = match.group(1)
         chat: Optional[Chat] = update.effective_chat
         member = chat.get_member(user_id)
@@ -921,7 +877,7 @@ def button(update: Update, context: CallbackContext) -> str:
             can_pin_messages=bot_member.can_pin_messages,
             can_manage_voice_chats=bot_member.can_manage_voice_chats,
         )
-        demoted = bot.promoteChatMember(
+        if demoted := bot.promoteChatMember(
             chat.id,
             user_id,
             can_change_info=False,
@@ -933,8 +889,7 @@ def button(update: Update, context: CallbackContext) -> str:
             can_pin_messages=False,
             can_promote_members=False,
             can_manage_voice_chats=False,
-        )
-        if demoted:
+        ):
             update.effective_message.edit_text(
                 f"ᴅᴇᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}\nᴜsᴇʀ : {mention_html(member.user.id, member.user.first_name)}!",
                 parse_mode=ParseMode.HTML,

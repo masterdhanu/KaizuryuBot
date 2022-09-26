@@ -20,7 +20,7 @@ from AsukaRobot.modules.helper_funcs.readable_time import get_readable_time
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
 
-AFKVID = "https://telegra.ph/file/01258fa1d17b3204c5fb4.mp4"
+AFKVID = "https://telegra.ph/file/c49829f9f5d65947cbc7e.mp4"
 
 
 def afk(update, context):
@@ -37,8 +37,7 @@ def afk(update, context):
     REDIS.set(f'afk_time_{update.effective_user.id}', start_afk_time)
     fname = update.effective_user.first_name
     try:
-        update.effective_message.reply_video(
-            AFKVID,caption="Byii Byiii {}!".format(fname))
+        update.effective_message.reply_video(AFKVID, caption=f"Byii Byiii {fname}!")
     except BadRequest:
         pass
 
@@ -52,8 +51,7 @@ def no_longer_afk(update, context):
         return
     end_afk_time = get_readable_time((time.time() - float(REDIS.get(f'afk_time_{user.id}'))))
     REDIS.delete(f'afk_time_{user.id}')
-    res = end_afk(user.id)
-    if res:
+    if res := end_afk(user.id):
         if message.new_chat_members:  # dont say msg
             return
         firstname = update.effective_user.first_name
@@ -107,8 +105,7 @@ def reply_afk(update, context):
                 try:
                     chat = context.bot.get_chat(user_id)
                 except BadRequest:
-                    print("Error: Could not fetch userid {} for AFK module".
-                          format(user_id))
+                    print(f"Error: Could not fetch userid {user_id} for AFK module")
                     return
                 fst_name = chat.first_name
 
@@ -130,9 +127,10 @@ def check_afk(update, context, user_id, fst_name, userc_id):
         if int(userc_id) == int(user_id):
             return
         if reason == "none":
-            res = "{} Is With Your GF!\nLast Seen Here: {} Ago.".format(fst_name, since_afk)
+            res = f"{fst_name} Is With Your GF!\nLast Seen Here: {since_afk} Ago."
         else:
-            res = "{} Is Dead!\nReason: {}\nLast Liveliness: {} Ago.".format(fst_name, reason, since_afk)
+            res = f"{fst_name} Is Dead!\nReason: {reason}\nLast Liveliness: {since_afk} Ago."
+
 
         update.effective_message.reply_text(res)
 
@@ -150,7 +148,7 @@ def __user_info__(user_id):
     return text
 
 def __stats__():
-    return f"鈥� {len(REDIS.keys())} Total Keys in Redis Database."
+    return f"• {len(REDIS.keys())} Total Keys in Redis Database."
 
 def __gdpr__(user_id):
     end_afk(user_id)
@@ -158,7 +156,7 @@ def __gdpr__(user_id):
 __mod_name__ = "Afk"
 __help__ = """
   When marked as AFK, any mentions will be replied to with a message stating that you're not available!
- 鈥� `/afk <reason>`*:* Mark yourself as AFK.
+ • `/afk <reason>`*:* Mark yourself as AFK.
  - `brb <reason>`*:* Same as the afk command, but not a command.
 """
 

@@ -53,7 +53,7 @@
 </h3>
 
 - <b>[masterdhanu](https://github.com/masterdhanu)  ➻  [sᴏᴍᴇᴛʜɪɴɢ](https://github.com/MasterDHANU/shinchanrobot) </b>
-- <b>[ᴀɴᴏɴʏᴍᴏᴜs]  ➻  [sᴏᴍᴇᴛʜɪɴɢ](https://github.com/RimuruDemonlord/KaizuryuBot) </b>
+-  ➻  [sᴏᴍᴇᴛʜɪɴɢ](https://github.com/ShinchanRobot/shinchanrobot) </b>
  
 <b>ᴀɴᴅ ᴀʟʟ [ᴛʜᴇ ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs](https://github.com/MasterDHANU/shinchanrobot/graphs/contributors) ᴡʜᴏ ʜᴇʟᴩᴇᴅ ɪɴ ᴍᴀᴋɪɴɢ KaizuryuBot ᴜsᴇғᴜʟ & ᴩᴏᴡᴇʀғᴜʟ 🖤 </b>
 

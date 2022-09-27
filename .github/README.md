@@ -20,7 +20,7 @@
 ━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">
-  <img src="https://telegra.ph/file/9b57400269bec8352c09f.jpg">
+  <img src="https://telegra.ph/file/73a66ef385226a1ab1639.jpg">
 </p>
 
 <p align="center">

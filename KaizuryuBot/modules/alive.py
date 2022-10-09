@@ -11,7 +11,7 @@ from KaizuryuBot import telethn as tbot, SUPPORT_CHAT, OWNER_USERNAME, dispatche
 from KaizuryuBot import ALIVE_PIC_URL
 
 
-VIDEO = https://telegra.ph/file/01258fa1d17b3204c5fb4.mp4
+VIDEO = "https://telegra.ph/file/01258fa1d17b3204c5fb4.mp4"
 
 
 @register(pattern=("/alive"))

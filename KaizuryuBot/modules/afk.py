@@ -8,14 +8,14 @@ from telegram import MessageEntity, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import Filters, MessageHandler, run_async
 
-from KaizuryuBot import dispatcher
-from KaizuryuBot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
-from KaizuryuBot.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
-from KaizuryuBot import REDIS
-from KaizuryuBot.modules.users import get_user_id
+from shinchanRobot import dispatcher
+from shinchanRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
+from shinchanRobot.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
+from shinchanRobot import REDIS
+from shinchanRobot.modules.users import get_user_id
 
-from KaizuryuBot.modules.helper_funcs.alternate import send_message
-from KaizuryuBot.modules.helper_funcs.readable_time import get_readable_time
+from shinchanRobot.modules.helper_funcs.alternate import send_message
+from shinchanRobot.modules.helper_funcs.readable_time import get_readable_time
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8

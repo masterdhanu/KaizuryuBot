@@ -8,11 +8,11 @@ from telegram import MessageEntity, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import Filters, MessageHandler, run_async
 
-from AsukaRobot import dispatcher
-from AsukaRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
-from AsukaRobot.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
-from AsukaRobot import REDIS
-from AsukaRobot.modules.users import get_user_id
+from KaizuryaBot import dispatcher
+from KaizuryaBot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
+from KaizuryaBot.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
+from KaizuryaBot import REDIS
+from KaizuryaBot.modules.users import get_user_id
 
 from AsukaRobot.modules.helper_funcs.alternate import send_message
 from AsukaRobot.modules.helper_funcs.readable_time import get_readable_time
@@ -20,7 +20,7 @@ from AsukaRobot.modules.helper_funcs.readable_time import get_readable_time
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
 
-AFKVID = "https://telegra.ph/file/c49829f9f5d65947cbc7e.mp4"
+AFKVID = "https://telegra.ph/file/01258fa1d17b3204c5fb4.mp4"
 
 
 def afk(update, context):

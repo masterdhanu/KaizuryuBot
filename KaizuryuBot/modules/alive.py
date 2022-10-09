@@ -21,7 +21,7 @@ async def awake(event):
     TEXT += f"» **ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ :** `{telever}` \n\n"
     TEXT += f"» **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{tlhver}` \n\n"
     TEXT += f"» **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{pyrover}` \n━━━━━━━━━━━━━━━━━\n\n"
-    TEXT += f"» **Me Jinda Hu Abbu Tak Bhai Log  ** /n/n"
+    TEXT += f"» **(☞ ͡° ͜ʖ ͡°)☞ Me Jinda Hu Abbi Tak Bhai Log  ** /n/n"
     BUTTON = [
         [
             Button.url("ʜᴇʟᴘ​", f"https://t.me/{dispatcher.bot.username}?start=help"),

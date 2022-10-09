@@ -40,10 +40,10 @@
 </h3>
 
 <p align="center">
-<a href="https://telegram.me/Shinchan"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/ShinchanRobotSupport"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 <p align="center">
-<a href="https://telegram.me/master_dhanu"><img src="https://img.shields.io/badge/%20Xelcius-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/master_dhanu"><img src="https://img.shields.io/badge/%20masterdhanu-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 
 ━━━━━━━━━━━━━━━━━━━━
